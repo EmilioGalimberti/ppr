@@ -1,0 +1,11 @@
+Main> crecimientoEntre 8 12
+21
+
+Main> alturasEnUnAnio 7 [120,108,89]
+[130,118,99
+
+Main> alturaEnEdades  120 8 [12,15,18]
+[141,141,141]
+
+Main> alturasPara [(5,70), (8, 120)] [3, 1]
+[114,134]

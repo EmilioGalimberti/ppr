@@ -1,0 +1,57 @@
+|obra funcion direccion entradaPlatea1 entradaPlatea2 entradaPlatea3 entradaVip1 palco|
+
+Transcript clear.
+
+obra := ObraTeatro new initialize.
+obra titulo: 'strange'.
+obra direccion: direccion.
+
+direccion := Direccion new initialize.
+direccion nombre: 'asd'. 
+direccion apellido: 'asda'.
+direccion porcentajeVentas: 99.6.
+
+entradaPlatea1 := EntradaPlatea new initialize.
+entradaPlatea1 importeBasico: 15.
+entradaPlatea1 nroButaca: 7. 
+
+entradaPlatea2 := EntradaPlatea new initialize.
+entradaPlatea2 importeBasico: 15.
+entradaPlatea2 nroButaca: 14.
+
+entradaPlatea3 := EntradaPlatea new initialize.
+entradaPlatea3 importeBasico: 15.
+entradaPlatea3 nroButaca: 27.
+
+palco := Palco new initialize.
+palco cantidadAsientos: 4.
+palco codigo: 'A'. 
+
+entradaVip1 := EntradaVip new initialize.
+entradaVip1 importeBasico: 15.
+entradaVip1 palco: palco.
+
+funcion := Funcion new initialize.
+funcion codigo: 1.
+
+Transcript show: (obra addFuncion: funcion ); cr.
+Transcript show: (obra habilitarEntrada: entradaPlatea1  y: 1 ); cr.
+Transcript show: (obra habilitarEntrada: entradaVip1 y: 1 ); cr. 
+Transcript show: (obra habilitarEntrada: entradaPlatea1  y: 10 ); cr.
+
+Transcript show: (obra venderEntradaPlatea: 1 ); cr.
+Transcript show: (obra venderEntradaPlatea: 1 ); cr.
+Transcript show: (obra venderEntradaPlatea: 10 ); cr.
+
+Transcript show: (obra venderEntradaVip: 1 aceptoServicioCatering: true ); cr.
+Transcript show: (obra venderEntradaVip: 1 aceptoServicioCatering: true ); cr.
+Transcript show: (obra venderEntradaVip: 10 aceptoServicioCatering: true ); cr.
+
+Transcript show: (obra importeTotalVentasFechaDesde: Date today  fechaHasta: Date today ); cr.
+
+
+Transcript show: (obra habilitarEntrada: entradaPlatea3  y: 1 ); cr.
+Transcript show: (obra habilitarEntrada: entradaPlatea2  y: 1 ); cr. 
+
+
+Transcript show: (obra listadoOrdenadoNroButacasDisponiblesParaFuncion: 1 ); cr.
