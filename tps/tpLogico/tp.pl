@@ -71,6 +71,12 @@ cls :- write('\33\[2J').
 
 % CodigoPalco, Descripcion, ListaDeAsientosHabilitados
 
+palcos('A','Primero Izquierda',['A1','A2','A3','A4']).
+palcos('B','Segundo Izquierda',['B1','B2']).
+palcos('C','Central arriba',['C1','C2','C3','C4','C5','C6']).
+palcos('D','Central abajo',[]).
+palcos('E','Primro Derecho',['E1','E2']).
+palcos('F','Segundo derecha',['F1','F2','F3']).
 
 
 % ------------- FORMULACION DE REGLAS ------------------
@@ -80,14 +86,66 @@ cls :- write('\33\[2J').
 % conocer el título de la obra, y el
 % nombre y apellido del director.
 
+%1)
 datos_entrada(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):-
     entradas(CodEntrada, CodFunc, _, _, _),
     funciones(CodFunc, CodObra, fecha(Dia, Mes, Anio), hora(Hora, Min), _),
     obrasArtisticas(CodObra, TituloObra, CodDir, _),
     directores(CodDir, NomDir, ApDir, _).
 
+%2)
 existe_entrada_vendida_butaca_entre(EntreX,EntreY):-
     entradas(_,_,_,Vendida,platea(NumeroButaca)),
     NumeroButaca >= EntreX,
     NumeroButaca =< EntreY,
-    Vendida = 'si'.
+    Vendida = si,!.
+
+%3)
+%Largo de una lista
+
+listLength([],0).
+listLength([_|L],N) :-
+        listLength(L, N1),
+        N is N1+1.
+
+importe_final_entrada(CodigoEntrada, ImporteFinal):-
+(  (entradas(CodigoEntrada,_,ImporteBasico,Vendida,platea(NumeroButaca)),
+    Vendida = si,
+        (   (  NumeroButaca >= 1,NumeroButaca =< 49,
+                Porcentaje is ImporteBasico * 0.25,
+                ImporteFinal is Porcentaje + ImporteBasico
+            ) ;
+            (   NumeroButaca > 49,
+                Porcentaje is ImporteBasico * 0.10,
+                ImporteFinal is Porcentaje + ImporteBasico
+            )
+        )
+    )
+        ;
+    (
+        entradas(CodigoEntrada,_,ImporteBasico,Vendida,vip(CodigoPalco,ServicioCatering)),
+        Vendida = si,
+        ( (
+            ServicioCatering = no,
+            palcos(CodigoPalco,_,ListaDeAsientosHabilitados),
+            listLength(ListaDeAsientosHabilitados,N),
+            ImporteFinal is ImporteBasico * N
+          ) ;
+          (
+            ServicioCatering = si,
+            palcos(CodigoPalco,_,ListaDeAsientosHabilitados),
+            listLength(ListaDeAsientosHabilitados,N),
+            Porcentaje is ((ImporteBasico * N) * 0.30),
+            ImporteFinal is ((ImporteBasico * N) + Porcentaje)
+          )
+        )
+    )
+        ;
+    (
+      entradas(CodigoEntrada,_,_,Vendida,_),
+      Vendida = no,
+      ImporteFinal is 0  
+    )
+
+).
+
