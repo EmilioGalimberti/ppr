@@ -44,9 +44,6 @@ entradas(en1, fun1, 500, no, platea(1)).
 entradas(en2, fun1, 500, si, platea(3)).
 entradas(en3, fun1, 500, no, platea(79)).
 entradas(en4, fun1, 500, si, platea(99)).
-entradas(en5, fun1, 200, si, vip('A', no)).
-entradas(en6, fun1, 200, si, vip('B', si
-)).
 entradas(en7, fun2, 500, no, platea(9)
 ).
 entradas(en8, fun2, 500, si, platea(55)).
@@ -105,7 +102,7 @@ existe_entrada_vendida_butaca_entre(EntreX,EntreY):-
 
 listLength([],0).
 listLength([_|L],N) :-
-        list_length(L, N1),
+        listLength(L, N1),
         N is N1+1.
 
 importe_final_entrada(CodigoEntrada, ImporteFinal):-
@@ -121,7 +118,6 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
             )
         )
     )
-
         ;
     (
         entradas(CodigoEntrada,_,ImporteBasico,Vendida,vip(CodigoPalco,ServicioCatering)),
@@ -140,6 +136,32 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
             ImporteFinal is ((ImporteBasico * N) + Porcentaje)
           )
         )
-)
-        .
+    )
+        ;
+    (
+      entradas(CodigoEntrada,_,_,Vendida,_),
+      Vendida = no,
+      ImporteFinal is 0
+    )
+
+),!.
+
+%4)
+%Lista de importe Finales
+listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales):-
+    findall(ImporteFinal,
+           ( entrada(CodigoEntrada,CodigoFuncion,_,_,_),
+              importe_final_entrada(CodigoEntrada,ImporteFinal)),
+            ListaImportesFinales
+           ).
+
+%Suma lista
+listSum([],0).
+listSum([Head|Tail],Sum):-
+    listSum(Tail,SumTemp),
+    Sum is Head + SumTemp.
+
+importe_total_funcion(CodigoFuncion, ImporteTotal):-
+    listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales),
+    listSum(ListaImportesFinales,ImporteTotal).
 

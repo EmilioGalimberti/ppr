@@ -144,8 +144,27 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
     (
       entradas(CodigoEntrada,_,_,Vendida,_),
       Vendida = no,
-      ImporteFinal is 0  
+      ImporteFinal is 0
     )
 
-).
+),!.
+
+%4)
+%Lista de importe Finales
+listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales):-
+    findall(ImporteFinal,
+           ( entradas(CodigoEntrada,CodigoFuncion,_,_,_),
+              importe_final_entrada(CodigoEntrada,ImporteFinal)),
+            ListaImportesFinales
+           ).
+
+%Suma lista
+listSum([],0).
+listSum([Head|Tail],Sum):-
+    listSum(Tail,SumTemp),
+    Sum is Head + SumTemp.
+
+importe_total_funcion(CodigoFuncion, ImporteTotal):-
+    listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales),
+    listSum(ListaImportesFinales,ImporteTotal).
 
