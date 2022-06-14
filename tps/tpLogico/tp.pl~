@@ -175,3 +175,11 @@ listImportTotaleFunciones(CodigoObra, ListaImportesTotales):-
 importe_total_recaudado_obra(CodigoObra,ImporteTotalObra):-
     listImportTotaleFunciones(CodigoObra,ListaImportesTotales),
     listSum(ListaImportesTotales,ImporteTotalObra).
+
+%6)
+
+recaudacion_total_por_obra_de_director(CodigoDirector,Lista):-
+    findall((Titulo,ImporteTotalObra),
+            (obrasArtisticas(CodigoObra,Titulo,CodigoDirector,_),
+             importe_total_recaudado_obra(CodigoObra,ImporteTotalObra)
+            ),Lista).

@@ -108,6 +108,7 @@ listLength([_|L],N) :-
         N is N1+1.
 
 importe_final_entrada(CodigoEntrada, ImporteFinal):-
+    %PLATEA
 (  (entradas(CodigoEntrada,_,ImporteBasico,si,platea(NumeroButaca)),
             (   (  NumeroButaca >= 1,NumeroButaca =< 49,
                 Porcentaje is ImporteBasico * 0.25,
@@ -121,6 +122,7 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
     )
         ;
     (
+       %VIP SIN PALCO
         entradas(CodigoEntrada,_,ImporteBasico,si,vip(CodigoPalco,ServicioCatering)),
           ( (
             ServicioCatering = no,
@@ -128,6 +130,7 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
             listLength(ListaDeAsientosHabilitados,N),
             ImporteFinal is ImporteBasico * N
           ) ;
+         %VIP CON PALCO
           (
             ServicioCatering = si,
             palcos(CodigoPalco,_,ListaDeAsientosHabilitados),
