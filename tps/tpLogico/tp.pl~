@@ -168,7 +168,7 @@ importe_total_funcion(CodigoFuncion, ImporteTotal):-
 %Lista de importe Totales Funciones
 listImportTotaleFunciones(CodigoObra, ListaImportesTotales):-
     findall(ImporteTotal,
-            (   funcion(CodigoFuncion,CodigoObra,_,_,_),
+            (   funciones(CodigoFuncion,CodigoObra,_,_,_),
                 importe_total_funcion(CodigoFuncion,ImporteTotal)),
             ListaImportesTotales).
 
