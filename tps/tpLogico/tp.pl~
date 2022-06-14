@@ -44,6 +44,9 @@ entradas(en1, fun1, 500, no, platea(1)).
 entradas(en2, fun1, 500, si, platea(3)).
 entradas(en3, fun1, 500, no, platea(79)).
 entradas(en4, fun1, 500, si, platea(99)).
+entradas(en5, fun1, 200, si, vip('A', no)).
+entradas(en6, fun1, 200, si, vip('B', si
+)).
 entradas(en7, fun2, 500, no, platea(9)
 ).
 entradas(en8, fun2, 500, si, platea(55)).
@@ -92,10 +95,9 @@ datos_entrada(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):
 
 %2)
 existe_entrada_vendida_butaca_entre(EntreX,EntreY):-
-    entradas(_,_,_,Vendida,platea(NumeroButaca)),
+    entradas(_,_,_,si,platea(NumeroButaca)),
     NumeroButaca >= EntreX,
-    NumeroButaca =< EntreY,
-    Vendida = si,!.
+    NumeroButaca =< EntreY,!.
 
 %3)
 %Largo de una lista
@@ -106,9 +108,8 @@ listLength([_|L],N) :-
         N is N1+1.
 
 importe_final_entrada(CodigoEntrada, ImporteFinal):-
-(  (entradas(CodigoEntrada,_,ImporteBasico,Vendida,platea(NumeroButaca)),
-    Vendida = si,
-        (   (  NumeroButaca >= 1,NumeroButaca =< 49,
+(  (entradas(CodigoEntrada,_,ImporteBasico,si,platea(NumeroButaca)),
+            (   (  NumeroButaca >= 1,NumeroButaca =< 49,
                 Porcentaje is ImporteBasico * 0.25,
                 ImporteFinal is Porcentaje + ImporteBasico
             ) ;
@@ -120,9 +121,8 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
     )
         ;
     (
-        entradas(CodigoEntrada,_,ImporteBasico,Vendida,vip(CodigoPalco,ServicioCatering)),
-        Vendida = si,
-        ( (
+        entradas(CodigoEntrada,_,ImporteBasico,si,vip(CodigoPalco,ServicioCatering)),
+          ( (
             ServicioCatering = no,
             palcos(CodigoPalco,_,ListaDeAsientosHabilitados),
             listLength(ListaDeAsientosHabilitados,N),
@@ -139,18 +139,17 @@ importe_final_entrada(CodigoEntrada, ImporteFinal):-
     )
         ;
     (
-      entradas(CodigoEntrada,_,_,Vendida,_),
-      Vendida = no,
-      ImporteFinal is 0
+      entradas(CodigoEntrada,_,_,no,_),
+       ImporteFinal is 0
     )
 
 ),!.
 
 %4)
-%Lista de importe Finales
+%Lista de importe Finales de ENTRADAS
 listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales):-
     findall(ImporteFinal,
-           ( entrada(CodigoEntrada,CodigoFuncion,_,_,_),
+           ( entradas(CodigoEntrada,CodigoFuncion,_,_,_),
               importe_final_entrada(CodigoEntrada,ImporteFinal)),
             ListaImportesFinales
            ).
@@ -165,3 +164,14 @@ importe_total_funcion(CodigoFuncion, ImporteTotal):-
     listImportFinalesEntradas(CodigoFuncion,ListaImportesFinales),
     listSum(ListaImportesFinales,ImporteTotal).
 
+%5)
+%Lista de importe Totales Funciones
+listImportTotaleFunciones(CodigoObra, ListaImportesTotales):-
+    findall(ImporteTotal,
+            (   funcion(CodigoFuncion,CodigoObra,_,_,_),
+                importe_total_funcion(CodigoFuncion,ImporteTotal)),
+            ListaImportesTotales).
+
+importe_total_recaudado_obra(CodigoObra,ImporteTotalObra):-
+    listImportTotaleFunciones(CodigoObra,ListaImportesTotales),
+    listSum(ListaImportesTotales,ImporteTotalObra).
