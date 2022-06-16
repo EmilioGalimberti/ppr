@@ -1,0 +1,371 @@
+entradas(en9, fun2, 500, si, platea(59)).
+entradas(en10, fun2, 300, no, vip('A', si)
+).
+entradas(en11, fun2, 700, si, vip('F', no)).
+entradas(en12, fun3, 500, si, platea(99)).
+entradas(en13, fun3, 500, no, vip('B', si)).
+entradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dia, Mes, Anio), hora(Hora, Min), _), obrasArtisticas(CodObra, TituloObra, _, _), directores(_entradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Di
+
+                                                                                                                                                     entradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Di
+                                                                                                                                                     entradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Dientradas(en14, fun3, 500, si, platea(11)).
+entradas(en15, fun3, 200, si, vip('C', si)).
+entradas(en16, fun4, 500, si, platea(51)).
+entradas(en17, fun4, 500, si, vip('A', no)).
+entradas(en18, fun4, 500, no, platea(1)).
+entradas(en19, fun4, 200, si, vip('F', si)).
+entradas(en20, fun4, 500, si, platea(5)).
+
+
+cls :- write('\33\[2J').
+
+% Tabla 5: Palcos
+
+% CodigoPalco, Descripcion, ListaDeAsientosHabilitados
+
+
+
+% ------------- FORMULACION DE REGLAS ------------------
+
+% Para cierto c�digo de entrada se deber� conocer el d�a, mes y a�o de la funci�n asociada, como as�
+% tambi�n la hora y minutos de inicio de esta. Tambi�n se deber� poder
+% conocer el t�tulo de la obra, y el
+% nombre y apellido del director.
+
+punto1(CodEntrada, Dia, Mes, Anio, Hora, Min, TituloObra, NomDir, ApDir):- entradas(CodEntrada, CodFunc, _, _, _), funciones(CodFunc, CodObra, fecha(Di
+

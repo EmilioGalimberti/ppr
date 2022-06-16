@@ -1,0 +1,16 @@
+%TABLAS
+%
+usuario(2358964,'Perez Maria',[161,164]).
+usuario(24135664,'Gomez Jose',[162,163]).
+usuario(2567364,'Garcia Delfina',[165]).
+
+factura('00010-33550', 161, lecturaAnterior(fecha(20,7,2018),32993).lecturaActual(fecha(20,8,2018),33156),1).
+factura('00010-33551', 162, lecturaAnterior(fecha(20,7,2018),27645).lecturaActual(fecha(20,8,2018),27895),2).
+factura('00010-33552', 163, lecturaAnterior(fecha(23,7,2018),31895).lecturaActual(fecha(23,8,2018),33015),1).
+factura('00010-33553', 164, lecturaAnterior(fecha(27,7,2018),15689).lecturaActual(fecha(27,8,2018),16000),1).
+factura('00010-33554', 165, lecturaAnterior(fecha(27,7,2018),42589).lecturaActual(fecha(27,8,2018),42789),2).
+
+escalon(1,2.72).
+escalon(2,3.53).
+
+
