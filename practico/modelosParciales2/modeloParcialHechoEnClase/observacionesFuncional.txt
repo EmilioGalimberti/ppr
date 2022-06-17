@@ -1,0 +1,14 @@
+Listas con recursividad
+
+Lo mas complicado que puede aparecer es esto
+
+filtrarPor:: [Integer]->Integer->[Integer]
+filtrarPor [] _ = []
+filtrarPor(x:xs) ref
+	| x <= ref = x:(filtrarPor xs ref)
+	| otherwise = filtarPor xs ref
+
+
+Lo mismo pero por compresion
+
+filtrarPor xs ref = [x| x <- xs, x>=ref]
