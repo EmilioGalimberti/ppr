@@ -1,0 +1,33 @@
+|p p1 recta|
+Transcript clear.
+
+p := Punto new. 
+
+Transcript show: p asString ;cr.
+
+p x: 1.
+p y: 5.
+
+Transcript show: p asString ;cr.
+Transcript show: 'El cuadrante al que pertenece' ;cr.
+Transcript show: p cuadrante  ;cr.
+
+p1 := Punto new. 
+p1 x: 20.
+p1 y: -40.
+Transcript show: 'otro objeto Punto' ;cr.
+Transcript show: p1 asString ;cr.
+Transcript show: 'El cuadrante al que pertenece' ;cr.
+Transcript show: p1 cuadrante  ;cr.
+
+recta := Recta new.
+recta m: 5.
+recta punto: p.
+
+Transcript show: 'Recta' ;cr.
+Transcript show: 'Ordenada al origen' ;cr.
+Transcript show: recta ordenada  ;cr.
+Transcript show: 'existe el punto en la recta' ;cr.
+Transcript show: (recta existe: p)  ;cr.
+Transcript show: 'Formula' ;cr.
+Transcript show: recta mostrarFormula  ;cr.

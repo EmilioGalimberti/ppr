@@ -1,0 +1,50 @@
+|j1 j2 j3 e1 e2 eq1|
+Transcript clear.
+
+e1 := Entrenador new.
+e1 antiguedad: 3.
+Transcript show: e1 asString;cr.
+
+e2  := Entrenador new.
+e2 antiguedad: 6.
+Transcript show: e2 asString ;cr.
+
+j1   := Jugador  new.
+j1 faltas: 7.
+j1 grupoSanguineo: 'B-'.
+j1 localidad: 'Cordoba'.
+Transcript show: j1 asString ;cr.
+
+j2   := Jugador  new.
+j2 nombre: 'bendeto'.
+j2 lesionado: false.
+j2 faltas: 0.
+j2 posicion: 'Mediocampista'.
+j2 grupoSanguineo: 'AB+'.
+Transcript show: j2 asString ;cr.
+
+j3    := Jugador  new.
+
+j3  lesionado: true.
+j3  faltas: 5.
+j3 posicion: 'a'.
+j3 grupoSanguineo: 'AB+'.
+Transcript show: j3 asString ;cr.
+
+eq1   := Equipo   new.
+eq1 agregarPersona: j1.
+eq1 agregarPersona: j2.
+eq1 agregarPersona: j3.
+Transcript show:'listsusp';cr.
+Transcript show:eq1 listadoSuspendidos;cr.
+Transcript show:'a';cr.
+Transcript show: (eq1 agregaJugadoresConPosicion: 'a' y: 5);cr.
+Transcript show:eq1 asString ;cr.
+Transcript show:'aexdf';cr.
+Transcript show: eq1 existeJugador;cr.
+Transcript show:'grupoSanguineo ';cr.
+Transcript show: eq1 grupoSanguineo;cr. 
+Transcript show:'Listado mas valoradoes ';cr.
+Transcript show: (eq1 listadoMasValorados: 4 );cr. 
+Transcript show:'awa ';cr.
+Transcript show: (eq1 jugadoresConFaltas: 5 hasta:  7 );cr. 

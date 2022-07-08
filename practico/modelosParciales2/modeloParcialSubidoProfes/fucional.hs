@@ -58,6 +58,7 @@ funcion2Compresion (x:xs) desde hasta = [x| x <- xs, x>desde && x <hasta]
 --usando recursividad en todas las funciones que Ud. considere necesario realizar.
 
 --PARA sacar cantidad de mayores a P y pares
+
 funcion3a [] _ = 0
 funcion3a (x:xs) p = if ( x > p && even x) then 1 + (funcion3a xs p) else (funcion3a xs p)
 

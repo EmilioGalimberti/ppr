@@ -1,0 +1,66 @@
+|micro p1 micro2 p2 micro3 micro4 |
+Transcript clear.
+
+micro := Micro new.
+
+micro n: 0.
+micro m: 0.
+Transcript show: 'micro 1';cr.
+Transcript show: micro asString;cr.
+"Pasajero que acepta subir siempre"
+p1 := Pasajero new.
+p1 tipo: 0.
+Transcript show: (p1 asString);cr.
+Transcript show: 'pasajero 1 aceptaria subir a micro1?';cr.
+Transcript show: (p1 aceptaSubir: micro);cr .
+"Tira error por que no hay espacio en el micro"
+Transcript show: 'micro1 sube p1?';cr.
+Transcript show: (micro subir: p1);cr .
+
+Transcript show: '==================';cr;cr.
+"========================================="
+
+micro2 := Micro new.
+micro2 n: 1.
+micro2 m: 0.
+Transcript show: 'micro 2';cr.
+Transcript show: micro2 asString;cr.
+Transcript show: 'micro2 sube p1?';cr.
+Transcript show: (micro2 subir: p1);cr .
+
+Transcript show: '==================';cr;cr.
+"========================================="
+"========================================="
+micro3 := Micro new.
+micro3  n: 0.
+micro3 m: 1.
+Transcript show: 'micro 3';cr.
+Transcript show: micro3 asString;cr.
+
+p2 := Pasajero new.
+p2 tipo: 1.
+
+
+Transcript show: (p2 asString);cr.
+Transcript show: 'pasajero 2 aceptaria subir a micro3?';cr.
+Transcript show: (p2 aceptaSubir: micro3);cr .
+Transcript show: 'micro3 sube p2?';cr.
+"No subio porque solo acepta ir sentado el p2"
+Transcript show: (micro3 subir: p2);cr .
+
+Transcript show: '==================';cr;cr.
+"========================================="
+micro4 := Micro new.
+micro4  n: 1.
+micro3 m: 1.
+Transcript show: 'micro 4';cr.
+Transcript show: micro4 asString;cr.
+
+Transcript show: (p2 asString);cr.
+Transcript show: 'pasajero 2 aceptaria subir a micro4?';cr.
+Transcript show: (p2 aceptaSubir: micro4);cr .
+Transcript show: 'micro4 sube p2?';cr.
+"No subio porque solo acepta ir sentado el p2"
+Transcript show: (micro4 subir: p2);cr .
+
+

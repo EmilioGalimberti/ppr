@@ -1,0 +1,25 @@
+| v  t t1 taller|
+Transcript clear.
+
+
+
+v:= Auto  new.
+Transcript show: v asString;cr.
+"v calcularCosto"
+
+
+t := Trabajo new.
+t codigo: 1; empleado: 'Juan'; tiempo: 2; vehiculo: v.
+Transcript show: t calcularCosto;cr. 
+Transcript show: t asString;cr.
+
+t1 := Trabajo new.
+t1 codigo: 1; empleado: 'Juan'; tiempo: 2; vehiculo: v.
+Transcript show: t1 calcularCosto;cr. 
+Transcript show: t1 asString;cr.
+
+taller := TallerMecanico new.
+taller agregarTrabajo: t.
+taller agregarTrabajo: t1.
+Transcript show: 'Trabajos del taller ', taller totalTrabajosRealizados asString ;cr.
+Transcript show: 'Costo total: ', taller calcularCostoTotal  asString ;cr.
